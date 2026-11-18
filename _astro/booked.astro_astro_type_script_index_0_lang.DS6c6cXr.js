@@ -1,0 +1,1 @@
+import{t as e}from"./funnel.BrDw6ApH.js";e(`booked`).track(`visit`,{path:location.pathname});try{let e=(new URLSearchParams(location.search).get(`invitee_first_name`)??``).trim().slice(0,40),t=document.querySelector(`[data-title]`);t&&e&&/^[\p{L}\p{M}' .-]+$/u.test(e)&&(t.textContent=(t.dataset.named??``).replace(`{name}`,e))}catch{}
