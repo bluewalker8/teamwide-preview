@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preload" href="/_astro/source-serif-4-latin-wght-italic.B-rCj6ir.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/dm-sans-latin-wght-normal.Xz1IZZA0.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><meta name="color-scheme" content="light"><title>How to Get ChatGPT to Recommend Your Business | Teamwide AI</title><meta name="description" content="Check who ChatGPT names in your trade and town and see which sites it read. Then copy the 3 weekly habits that give AI real facts about your business."><link rel="canonical" href="https://teamwideai.com/guides/get-recommended-by-chatgpt/"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-11-20"><meta property="article:modified_time" content="2026-11-24"><meta property="og:site_name" content="Teamwide AI"><meta property="og:locale" content="en_US"><meta property="og:title" content="How to Get ChatGPT to Recommend Your Business | Teamwide AI"><meta property="og:description" content="Check who ChatGPT names in your trade and town and see which sites it read. Then copy the 3 weekly habits that give AI real facts about your business."><meta property="og:url" content="https://teamwideai.com/guides/get-recommended-by-chatgpt/"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How to Get ChatGPT to Recommend Your Business | Teamwide AI"><meta name="twitter:description" content="Check who ChatGPT names in your trade and town and see which sites it read. Then copy the 3 weekly habits that give AI real facts about your business."><meta name="twitter:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://teamwideai.com/#organization","name":"Teamwide AI","url":"https://teamwideai.com/","logo":"https://teamwideai.com/img/logo-orb.webp"},{"@type":"Person","@id":"https://teamwideai.com/#blue-walker","name":"Blue Walker","url":"https://teamwideai.com/about/"},{"@type":"WebPage","@id":"https://teamwideai.com/guides/get-recommended-by-chatgpt/#webpage","url":"https://teamwideai.com/guides/get-recommended-by-chatgpt/","name":"How to Get ChatGPT to Recommend Your Business | Teamwide AI","description":"Check who ChatGPT names in your trade and town and see which sites it read. Then copy the 3 weekly habits that give AI real facts about your business.","isPartOf":{"@id":"https://teamwideai.com/#website"},"inLanguage":"en","breadcrumb":{"@id":"https://teamwideai.com/guides/get-recommended-by-chatgpt/#breadcrumb"},"mainEntity":{"@id":"https://teamwideai.com/guides/get-recommended-by-chatgpt/#article"}},{"@type":"Article","@id":"https://teamwideai.com/guides/get-recommended-by-chatgpt/#article","headline":"How to Get ChatGPT to Recommend Your Business","description":"Check who ChatGPT names in your trade and town and see which sites it read. Then copy the 3 weekly habits that give AI real facts about your business.","url":"https://teamwideai.com/guides/get-recommended-by-chatgpt/","mainEntityOfPage":{"@id":"https://teamwideai.com/guides/get-recommended-by-chatgpt/#webpage"},"datePublished":"2026-11-20","dateModified":"2026-11-24","author":{"@id":"https://teamwideai.com/#blue-walker"},"publisher":{"@id":"https://teamwideai.com/#organization"},"image":["https://teamwideai.com/img/share.jpg"],"isAccessibleForFree":true,"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://teamwideai.com/guides/get-recommended-by-chatgpt/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Teamwide AI","item":"https://teamwideai.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://teamwideai.com/guides/"},{"@type":"ListItem","position":3,"name":"How to get ChatGPT to recommend your business: what to check and fix","item":"https://teamwideai.com/guides/get-recommended-by-chatgpt/"}]}]}</script><script>(function(){const FIRST_KEY = 'tw-first';
+const KEEP_MS = 30 * 24 * 60 * 60 * 1000;
+function isInternal(utm) {
+return /^(site|blog|rank-check|gift-[a-z0-9._-]+|guide-[a-z0-9._-]+)$/.test(utm);
+}
+function clean(text, max) {
+return String(text || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, max || 40);
+}
+const AI_UTM = /(^|[._-])(chatgpt|openai|perplexity|gemini|copilot|claude)([._-]|$)/;
+const AI_HOST = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai)$/;
+const SEARCH_HOST = /(^|\.)(google|bing|duckduckgo|yahoo|brave|ecosia)\.[a-z.]+$/;
+const SOCIAL_HOST = /(^|\.)(instagram\.com|linkedin\.com|lnkd\.in|facebook\.com|fb\.com|youtube\.com|youtu\.be|tiktok\.com|x\.com|twitter\.com|t\.co|reddit\.com)$/;
+const SOCIAL_APP = /Instagram|FBAN|FBAV|LinkedInApp|TikTok|musical_ly|BytedanceWebview/;
+function classify(utm, referrer, ua, selfHost) {
+const tag = clean(utm);
+if (tag && !isInternal(tag)) return AI_UTM.test(tag) ? 'ai-search' : tag;
+let host = '';
+try {
+host = referrer ? new URL(referrer).hostname.replace(/^www\./, '').toLowerCase() : '';
+} catch (e) {
+host = '';
+}
+const self = String(selfHost || '').replace(/^www\./, '').toLowerCase();
+if (host && host === self) return null;
+if (host) {
+if (AI_HOST.test(host)) return 'ai-search';
+if (SEARCH_HOST.test(host)) return 'search';
+if (SOCIAL_HOST.test(host)) return 'social';
+return clean(host) || 'direct';
+}
+if (SOCIAL_APP.test(ua || '')) return 'social';
+return 'direct';
+}
+function readFirst(w) {
+try {
+const saved = JSON.parse(w.localStorage.getItem(FIRST_KEY) || 'null');
+if (!saved || typeof saved.s !== 'string' || !(w.Date.now() - saved.t < KEEP_MS)) return null;
+return { source: clean(saved.s), path: String(saved.p || '').slice(0, 80) };
+} catch (e) {
+return null;
+}
+}
+function firstTouch(w) {
+try {
+if (readFirst(w)) return;
+const loc = w.location;
+const source = classify(new URLSearchParams(loc.search).get('utm_source'), w.document.referrer, w.navigator.userAgent, loc.hostname);
+if (!source) return;
+const path = String(loc.pathname).replace(/[^A-Za-z0-9/_.-]/g, '').slice(0, 80);
+w.localStorage.setItem(FIRST_KEY, JSON.stringify({ s: source, p: path, t: w.Date.now() }));
+} catch (e) {
+/* storage blocked (private mode): the funnel falls back to plain sources */
+}
+}
+function combine(first, utm) {
+const tail = `>${utm}`;
+return `${String(first).slice(0, 100 - tail.length)}${tail}`.slice(0, 100);
+}
+firstTouch(window);})();</script><link rel="stylesheet" href="/_astro/Audit.dlTuc9Ud.css"><link rel="stylesheet" href="/_astro/GiftCta.I-DMkbPs.css"></head><body class="aud"><header class="aud-top aud-top-band"><a class="aud-brand" href="/" aria-label="Teamwide AI, home"><img src="/img/logo-orb.webp" alt="" width="26" height="26"><span>Teamwide AI</span></a></header><main class="aud-page"><div class="band"><section class="hero gift-hero"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page"><span>How to get ChatGPT to recommend your business: what to check and fix</span></li></ol></nav><h1 class="hero-h1 gift-h1">How to get ChatGPT to recommend your business: what to check and fix</h1><p class="hero-sub">Run this prompt to see which sites ChatGPT pulls from, then set up the 3 weekly habits that give AI real facts about your business.</p><p class="byline"><span>By <a rel="author" href="/about/">Blue Walker</a></span><span><time datetime="2026-11-20">November 20, 2026</time></span><span>Updated <time datetime="2026-11-24">November 24, 2026</time></span></p></section></div><div class="aud-main"><article class="gift"><h2 id="step-1-run-the-check-5-minutes">Step 1: run the check (5 minutes)</h2>
+<ol>
+<li>Open ChatGPT with search on.</li>
+<li>Paste this, with your trade and town:</li>
+</ol>
+<div class="copybox"><pre><code>Who are the 5 best [trade] companies in [town]? For each one, list the websites you got that from.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<ol start="3">
+<li>Run it 3 times. Answers change every run, so write down who shows up every time, and the sites it used.</li>
+<li>Run the same thing in Perplexity and in Google’s AI Mode.</li>
+</ol>
+<p>Want it done for you, with your Google Maps spots on a real map? The <a href="/rank/?utm_source=guide-get-recommended-by-chatgpt">free rank check</a> runs it in about 2 minutes.</p>
+<h2 id="step-2-read-the-sources">Step 2: read the sources</h2>
+<p>The sites under each answer are where the AI got its facts.
+That list is your to do list.</p>
+<p>For every site it used:</p>
+<ul>
+<li><strong>Are you on it?</strong> If not, get listed. Most listing sites are free to claim.</li>
+<li><strong>Is it the same name, address and phone as your Google profile?</strong> Fix any site where it isn’t. Same spelling, same phone number, every time.</li>
+<li><strong>Do you have reviews there?</strong> Reviews on the sites it reads count more than your own website.</li>
+</ul>
+<p>Look for a licensing or state contractor list, the Better Business Bureau, and review sites.
+In one study of AI answers for roofers, plumbers and electricians, 39% cited the Better Business Bureau and 1 in 4 cited a government licensing site (8ight.AI, September 2026; they sell AI visibility work).
+The same study found the number of reviews mattered and the star rating didn’t: businesses with under 25 reviews got named 3.4% of the time, and 250 or more got named about 21% of the time.</p>
+<h2 id="step-3-the-3-things-that-run-every-week">Step 3: the 3 things that run every week</h2>
+<p>These run on every job, by themselves, once they’re set up.</p>
+<h3 id="1-every-finished-job-asks-for-a-review">1. Every finished job asks for a review</h3>
+<p>The day a job is done, the customer gets a text with your Google review link.</p>
+<ol>
+<li>Get your link: in your Google Business Profile, tap “Ask for reviews” and copy it.</li>
+<li>If your job software sends review requests, turn it on.</li>
+<li>If not: Zapier, trigger “job completed” in your job software (Housecall Pro calls it “New Completed Job”), then send the text from your texting app.</li>
+</ol>
+<p>The text:</p>
+<div class="copybox"><pre><code>Hi [first name], thanks for having us out today. If we did a good job, would you leave us a quick Google review? It really helps a small company like ours. [review link]
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Ask every customer, not only the happy ones.
+Asking only happy customers breaks Google’s rules.
+Only text customers who agreed to texts, and honor STOP.</p>
+<h3 id="2-every-job-becomes-a-page">2. Every job becomes a page</h3>
+<p>One real page per finished job on your website: the town, the problem, what you did, and your own photos.
+AI writes the draft from your photos and job notes. You read it and post it.
+Post the same thing to your Google Business Profile.</p>
+<p>Paste this into Claude or ChatGPT with the job notes and photos:</p>
+<div class="copybox"><pre><code>Write a short page for my [trade] company's website about one real job we just finished.
+Use only what is in my notes and photos. Never make up a detail, a number or a quote.
+
+Title: the service and the town, like "Water heater replacement in [town]".
+Then 4 short parts:
+The problem: what the customer called about, in plain words.
+What we found: what we saw when we got there.
+What we did: the work, step by step, in plain words.
+The result: how it was left.
+
+Under 300 words. Plain words a homeowner would use.
+Never use the customer's name or house number. The street name only if they said yes.
+List which of my photos to use, and write one plain caption for each.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Don’t let AI pump out pages for towns you never worked in.
+Google’s spam rules go after mass made AI pages.
+One real job, one real page.</p>
+<h3 id="3-a-weekly-ai-check">3. A weekly AI check</h3>
+<p>Every Monday, ask the same question and write down who got named.</p>
+<ul>
+<li><strong>Easiest:</strong> Perplexity Tasks (on the Pro plan) runs a question on a schedule and emails you the answer.</li>
+<li><strong>Or by hand:</strong> run the Step 1 prompt every Monday and keep a Google Sheet: the date, who got named, were you named, and the sites it used.</li>
+</ul>
+<p>Watch the sheet, not one answer.
+If a new site shows up in the sources, get listed on it.</p>
+<h2 id="rules">Rules</h2>
+<ul>
+<li>Nobody can promise you a spot in ChatGPT, and anyone who does is guessing. Answers change from run to run.</li>
+<li>What you can do is give it every reason to name you: reviews, the same details everywhere, and real pages.</li>
+<li>Google still sends most of the calls today. These same 3 things help there too.</li>
+</ul>
+</article><section class="gift-cta" aria-labelledby="gift-cta-title"><h2 id="gift-cta-title">Want us to find which of these would pay off fastest in your business?</h2><p>That is what the free AI Audit does.</p><a class="btn" href="/audit/?utm_source=guide-get-recommended-by-chatgpt">Start your free AI Audit</a></section><script type="module">var e=e=>{let t=document.createElement(`textarea`);t.value=e,t.setAttribute(`readonly`,``),t.style.position=`fixed`,t.style.opacity=`0`,document.body.append(t),t.select(),t.setSelectionRange(0,e.length);let n=document.execCommand(`copy`);return t.remove(),n};for(let t of document.querySelectorAll(`[data-copy]`))t.addEventListener(`click`,async()=>{let n=t.previousElementSibling?.innerText.replace(/\n$/,``)??``,r=!1;try{await navigator.clipboard.writeText(n),r=!0}catch{r=e(n)}t.textContent=r?`Copied`:`Press and hold the text to copy`,t.dataset.done=r?`yes`:`no`,window.setTimeout(()=>{t.textContent=`Copy`,delete t.dataset.done},1800)});</script><nav class="gift-more" aria-labelledby="gift-more-title"><h2 id="gift-more-title">More guides</h2><ul class="gift-cards"><li><a href="/guides/ai-for-hvac/"><strong>AI for HVAC Companies: 7 Setups to Copy</strong><span>7 AI setups for HVAC companies: after hours calls, open estimates, old systems, reviews, and a 6am text. For Jobber, Housecall Pro, or ServiceTitan.</span></a></li><li><a href="/guides/ai-for-roofing/"><strong>AI for Roofing Companies: 7 Setups to Copy</strong><span>7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries.</span></a></li><li><a href="/guides/missed-call-text-back/"><strong>Missed Call Text Back and Emergency Rule</strong><span>Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone.</span></a></li></ul></nav></div></main><footer class="aud-foot"><div class="aud-links"><a href="/about/">About</a> <a href="/guides/">Guides</a> <a href="/rank/">Rank check</a> <a href="/privacy/">Privacy</a> <a href="https://www.linkedin.com/company/teamwide-ai" target="_blank" rel="noopener">LinkedIn</a> <a href="https://www.instagram.com/blue__walker/" target="_blank" rel="noopener">Instagram</a></div><p class="aud-legal">© 2026 Teamwide AI. We make no promises about income or results; every company is different. This site is not part of Instagram or Meta, and is not endorsed by them.</p></footer></body></html>

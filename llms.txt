@@ -1,0 +1,33 @@
+# Teamwide AI
+
+> We help businesses implement AI to cut costs and increase profits. We tell you where AI fits, where it does not, and how to put it in. Free AI Audit.
+
+## Pages
+
+- [AI Implementation for Business Owners](https://teamwideai.com/): We help businesses implement AI to cut costs and increase profits. We tell you where AI fits, where it does not, and how to put it in. Free AI Audit.
+- [AI Readiness Assessment: Free AI Audit](https://teamwideai.com/audit/): Get your AI readiness assessment with our Free AI Audit. Spend 30 minutes with our founder. In 48 hours we send a written plan and an AI Score out of 100.
+- [Free Google Maps Rank Checker](https://teamwideai.com/rank/): Free Google Maps rank checker. Enter your business and town to see where you show up street by street, plus whether ChatGPT and Gemini name you.
+- [About Us and Our Founder Blue Walker](https://teamwideai.com/about/): Teamwide AI helps business owners in the US and Canada implement AI to cut costs and increase profits. Run by Blue Walker. Free AI Audit.
+- [AI Guides for Business Owners](https://teamwideai.com/guides/): Free step by step AI guides for business owners. Setups for HVAC, roofing, open quotes, overdue invoices, missed calls, and job costing.
+- [AI Agents for Business: 37 Small Helpers](https://teamwideai.com/agents/): See 37 small AI agents for business, each built for one job. Check which ones fit your office and what your team still handles. Free AI Audit.
+- [Privacy](https://teamwideai.com/privacy/): What we collect on the Free AI Audit form, why, and how to ask us to delete it.
+
+## Guides
+
+- [Job Costing for Contractors: Spot Losing Jobs](https://teamwideai.com/guides/job-costing-for-contractors/): Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders.
+- [Overdue Invoice Reminder: 3 Messages to Copy](https://teamwideai.com/guides/overdue-invoice-reminders/): Copy the AI rules for day 7 and day 21 overdue invoice reminders with your pay link, plus a day 35 call list. Never a threat. You check every note.
+- [Missed Call Text Back and Emergency Rule](https://teamwideai.com/guides/missed-call-text-back/): Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone.
+- [AI for HVAC Companies: 7 Setups to Copy](https://teamwideai.com/guides/ai-for-hvac/): 7 AI setups for HVAC companies: after hours calls, open estimates, old systems, reviews, and a 6am text. For Jobber, Housecall Pro, or ServiceTitan.
+- [How to Get ChatGPT to Recommend Your Business](https://teamwideai.com/guides/get-recommended-by-chatgpt/): Check who ChatGPT names in your trade and town and see which sites it read. Then copy the 3 weekly habits that give AI real facts about your business.
+- [Quote Follow Up Email and Text Rules](https://teamwideai.com/guides/quote-follow-up/): AI rules that write a short quote follow up email or text about each job on day 2, 7, and 21. Works with Jobber, Housecall Pro, or ServiceTitan.
+- [AI for Roofing Companies: 7 Setups to Copy](https://teamwideai.com/guides/ai-for-roofing/): 7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries.
+- [Employee Called in Sick: The 6am Crew Setup](https://teamwideai.com/guides/employee-called-in-sick/): How to cover a sick call out before you wake up. Get the crew sheet, the six rules, the three texts, and the AI prompt to fill the open shift.
+
+## Agents
+
+- [Review helper: AI agent](https://teamwideai.com/agents/review-helper/): Drafts a review request after every job and a reply to every new review.
+- [Missed call catcher: AI agent](https://teamwideai.com/agents/missed-call-catcher/): Logs every missed call and drafts a text back.
+- [Quote drafter: AI agent](https://teamwideai.com/agents/quote-drafter/): Turns a short note into a clean draft quote.
+- [Quote follow up: AI agent](https://teamwideai.com/agents/quote-follow-up/): Keeps track of every open quote and drafts the next follow up.
+- [DM sales agent: AI agent](https://teamwideai.com/agents/dm-sales-agent/): Reads every DM, asks the right questions and gets ready buyers to book a call.
+- [Invoice chaser: AI agent](https://teamwideai.com/agents/invoice-chaser/): Tracks overdue invoices and drafts a polite nudge.

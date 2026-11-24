@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preload" href="/_astro/source-serif-4-latin-wght-italic.B-rCj6ir.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/dm-sans-latin-wght-normal.Xz1IZZA0.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><meta name="color-scheme" content="light"><title>Job Costing for Contractors: Spot Losing Jobs | Teamwide AI</title><meta name="description" content="Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders."><link rel="canonical" href="https://teamwideai.com/guides/job-costing-for-contractors/"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-11-20"><meta property="article:modified_time" content="2026-11-24"><meta property="og:site_name" content="Teamwide AI"><meta property="og:locale" content="en_US"><meta property="og:title" content="Job Costing for Contractors: Spot Losing Jobs | Teamwide AI"><meta property="og:description" content="Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders."><meta property="og:url" content="https://teamwideai.com/guides/job-costing-for-contractors/"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Job Costing for Contractors: Spot Losing Jobs | Teamwide AI"><meta name="twitter:description" content="Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders."><meta name="twitter:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://teamwideai.com/#organization","name":"Teamwide AI","url":"https://teamwideai.com/","logo":"https://teamwideai.com/img/logo-orb.webp"},{"@type":"Person","@id":"https://teamwideai.com/#blue-walker","name":"Blue Walker","url":"https://teamwideai.com/about/"},{"@type":"WebPage","@id":"https://teamwideai.com/guides/job-costing-for-contractors/#webpage","url":"https://teamwideai.com/guides/job-costing-for-contractors/","name":"Job Costing for Contractors: Spot Losing Jobs | Teamwide AI","description":"Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders.","isPartOf":{"@id":"https://teamwideai.com/#website"},"inLanguage":"en","breadcrumb":{"@id":"https://teamwideai.com/guides/job-costing-for-contractors/#breadcrumb"},"mainEntity":{"@id":"https://teamwideai.com/guides/job-costing-for-contractors/#article"}},{"@type":"Article","@id":"https://teamwideai.com/guides/job-costing-for-contractors/#article","headline":"Job Costing for Contractors: Spot Losing Jobs","description":"Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders.","url":"https://teamwideai.com/guides/job-costing-for-contractors/","mainEntityOfPage":{"@id":"https://teamwideai.com/guides/job-costing-for-contractors/#webpage"},"datePublished":"2026-11-20","dateModified":"2026-11-24","author":{"@id":"https://teamwideai.com/#blue-walker"},"publisher":{"@id":"https://teamwideai.com/#organization"},"image":["https://teamwideai.com/img/share.jpg"],"isAccessibleForFree":true,"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://teamwideai.com/guides/job-costing-for-contractors/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Teamwide AI","item":"https://teamwideai.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://teamwideai.com/guides/"},{"@type":"ListItem","position":3,"name":"Job costing for contractors: find every job that lost money","item":"https://teamwideai.com/guides/job-costing-for-contractors/"}]}]}</script><script>(function(){const FIRST_KEY = 'tw-first';
+const KEEP_MS = 30 * 24 * 60 * 60 * 1000;
+function isInternal(utm) {
+return /^(site|blog|rank-check|gift-[a-z0-9._-]+|guide-[a-z0-9._-]+)$/.test(utm);
+}
+function clean(text, max) {
+return String(text || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, max || 40);
+}
+const AI_UTM = /(^|[._-])(chatgpt|openai|perplexity|gemini|copilot|claude)([._-]|$)/;
+const AI_HOST = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai)$/;
+const SEARCH_HOST = /(^|\.)(google|bing|duckduckgo|yahoo|brave|ecosia)\.[a-z.]+$/;
+const SOCIAL_HOST = /(^|\.)(instagram\.com|linkedin\.com|lnkd\.in|facebook\.com|fb\.com|youtube\.com|youtu\.be|tiktok\.com|x\.com|twitter\.com|t\.co|reddit\.com)$/;
+const SOCIAL_APP = /Instagram|FBAN|FBAV|LinkedInApp|TikTok|musical_ly|BytedanceWebview/;
+function classify(utm, referrer, ua, selfHost) {
+const tag = clean(utm);
+if (tag && !isInternal(tag)) return AI_UTM.test(tag) ? 'ai-search' : tag;
+let host = '';
+try {
+host = referrer ? new URL(referrer).hostname.replace(/^www\./, '').toLowerCase() : '';
+} catch (e) {
+host = '';
+}
+const self = String(selfHost || '').replace(/^www\./, '').toLowerCase();
+if (host && host === self) return null;
+if (host) {
+if (AI_HOST.test(host)) return 'ai-search';
+if (SEARCH_HOST.test(host)) return 'search';
+if (SOCIAL_HOST.test(host)) return 'social';
+return clean(host) || 'direct';
+}
+if (SOCIAL_APP.test(ua || '')) return 'social';
+return 'direct';
+}
+function readFirst(w) {
+try {
+const saved = JSON.parse(w.localStorage.getItem(FIRST_KEY) || 'null');
+if (!saved || typeof saved.s !== 'string' || !(w.Date.now() - saved.t < KEEP_MS)) return null;
+return { source: clean(saved.s), path: String(saved.p || '').slice(0, 80) };
+} catch (e) {
+return null;
+}
+}
+function firstTouch(w) {
+try {
+if (readFirst(w)) return;
+const loc = w.location;
+const source = classify(new URLSearchParams(loc.search).get('utm_source'), w.document.referrer, w.navigator.userAgent, loc.hostname);
+if (!source) return;
+const path = String(loc.pathname).replace(/[^A-Za-z0-9/_.-]/g, '').slice(0, 80);
+w.localStorage.setItem(FIRST_KEY, JSON.stringify({ s: source, p: path, t: w.Date.now() }));
+} catch (e) {
+/* storage blocked (private mode): the funnel falls back to plain sources */
+}
+}
+function combine(first, utm) {
+const tail = `>${utm}`;
+return `${String(first).slice(0, 100 - tail.length)}${tail}`.slice(0, 100);
+}
+firstTouch(window);})();</script><link rel="stylesheet" href="/_astro/Audit.dlTuc9Ud.css"><link rel="stylesheet" href="/_astro/GiftCta.I-DMkbPs.css"></head><body class="aud"><header class="aud-top aud-top-band"><a class="aud-brand" href="/" aria-label="Teamwide AI, home"><img src="/img/logo-orb.webp" alt="" width="26" height="26"><span>Teamwide AI</span></a></header><main class="aud-page"><div class="band"><section class="hero gift-hero"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page"><span>Job costing for contractors: find every job that lost money</span></li></ol></nav><h1 class="hero-h1 gift-h1">Job costing for contractors: find every job that <em>lost money</em></h1><p class="hero-sub">The exact AI rule to run on your own jobs on the 1st of every month and spot the ones that lost money.</p><p class="byline"><span>By <a rel="author" href="/about/">Blue Walker</a></span><span><time datetime="2026-11-20">November 20, 2026</time></span><span>Updated <time datetime="2026-11-24">November 24, 2026</time></span></p></section></div><div class="aud-main"><article class="gift"><h2 id="1-pull-two-exports-for-last-month">1. Pull two exports for last month</h2>
+<ul>
+<li><strong>Invoices:</strong> one line per finished job with the quoted price and every change order, and whether each change order was billed.</li>
+<li><strong>Time sheets:</strong> crew hours per job.</li>
+</ul>
+<p>Your job software and your books have both.
+Most job software and QuickBooks can export these as a spreadsheet.
+The menu names change from tool to tool, so search your tool’s help for “job costing” or “time sheet export”.</p>
+<p>You also need materials and subcontractor cost per job.
+If your bills and receipts are tagged to jobs in your books, pull those too.
+If not, start tagging them this month.</p>
+<h2 id="2-set-your-loaded-labor-rate-once">2. Set your loaded labor rate once</h2>
+<p>Your crew costs you more than their hourly wage.
+The loaded rate is what one crew hour really costs you.</p>
+<p>Take last year’s total crew cost: wages, payroll taxes, workers comp, health and other benefits, paid time off.
+Divide it by the crew hours that landed on jobs in your time sheets.</p>
+<p>Example: $340,000 of crew cost over 5,000 job hours is $68 an hour.</p>
+<p>Check it once a year, or when you give raises.</p>
+<h2 id="3-one-sheet-one-row-per-job">3. One sheet, one row per job</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Job</th>
+<th>Quoted</th>
+<th>Change orders billed</th>
+<th>Change orders NOT billed</th>
+<th>Crew hours</th>
+<th>Materials</th>
+<th>Subs</th>
+</tr>
+</thead>
+</table></div>
+<p>Then add these columns as formulas, so the sheet does the math and nobody guesses:</p>
+<ul>
+<li><strong>Billed</strong> = Quoted + Change orders billed</li>
+<li><strong>Cost</strong> = Crew hours x your loaded rate + Materials + Subs</li>
+<li><strong>Margin</strong> = (Billed minus Cost) / Billed</li>
+</ul>
+<p>If you can, add <strong>Estimated crew hours</strong>, <strong>Estimated materials</strong> and <strong>Estimated subs</strong> from your quote.
+That is how the AI can say why a job missed.</p>
+<h2 id="4-give-ai-your-margin-and-the-rule">4. Give AI your margin and the rule</h2>
+<p>Paste the sheet into Claude or ChatGPT with this:</p>
+<div class="copybox"><pre><code>I own a remodeling company. Below is last month's job sheet. One row per finished job.
+My loaded labor rate is $68 an hour. My target gross margin is 30%.
+
+My rule: Flag every job under my margin. Say why.
+
+Do the math with code, not in your head, using exactly these formulas:
+Billed = Quoted + change orders billed
+Cost = crew hours x $68 + materials + subs
+Margin = (Billed minus Cost) / Billed
+
+Then:
+1. Show me a table of every job: job, billed, cost, margin. Sort it lowest margin first.
+2. For every job under 30%, write one plain sentence on why it missed. Lead with the biggest cause, like crew hours over the estimate, materials over, a sub that ran over, or a change order that was never billed. Use dollar figures from the table only.
+3. For each of those jobs, write one fix I can use on the next job. One short sentence that starts with a verb.
+4. List every change order that was never billed, with the job and the amount.
+5. End with one line on what the missed jobs have in common.
+
+Plain words. No jargon. Do not make up any number that is not in my sheet or your table.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Change $68 and 30% to your own numbers, and “remodeling” to your trade.</p>
+<h2 id="5-every-month-before-you-price-the-next-job">5. Every month, before you price the next job</h2>
+<p>Run it on the 1st for last month.
+Read the red jobs first.
+Take the fixes into your next quote: hours you always miss, change orders you forget to bill, subs with no cap.</p>
+<h2 id="sample-numbers-used-in-this-example">Sample numbers used in this example</h2>
+<p>All DEMO numbers: a made up remodeler with 14 jobs in October.
+3 came in under 30%, and all 3 lost money:</p>
+<ul>
+<li><strong>Bathroom, Millbrook.</strong> Quoted $18,400. Crew hours double the estimate (220 against 110). Tile change order never billed: $1,250. Margin minus 9.9%.</li>
+<li><strong>Basement bathroom, Riverton.</strong> The plumber hit rock and billed time and materials with no cap: subs $6,200 over. Margin minus 1.6%.</li>
+<li><strong>Mudroom, Brookfield.</strong> The crew built a bench, cubbies and trim the client asked for, with no change order. Margin minus 3.7%.</li>
+</ul>
+</article><section class="gift-cta" aria-labelledby="gift-cta-title"><h2 id="gift-cta-title">Want us to find which of these would pay off fastest in your business?</h2><p>That is what the free AI Audit does.</p><a class="btn" href="/audit/?utm_source=guide-job-costing-for-contractors">Start your free AI Audit</a></section><script type="module">var e=e=>{let t=document.createElement(`textarea`);t.value=e,t.setAttribute(`readonly`,``),t.style.position=`fixed`,t.style.opacity=`0`,document.body.append(t),t.select(),t.setSelectionRange(0,e.length);let n=document.execCommand(`copy`);return t.remove(),n};for(let t of document.querySelectorAll(`[data-copy]`))t.addEventListener(`click`,async()=>{let n=t.previousElementSibling?.innerText.replace(/\n$/,``)??``,r=!1;try{await navigator.clipboard.writeText(n),r=!0}catch{r=e(n)}t.textContent=r?`Copied`:`Press and hold the text to copy`,t.dataset.done=r?`yes`:`no`,window.setTimeout(()=>{t.textContent=`Copy`,delete t.dataset.done},1800)});</script><nav class="gift-more" aria-labelledby="gift-more-title"><h2 id="gift-more-title">More guides</h2><ul class="gift-cards"><li><a href="/guides/overdue-invoice-reminders/"><strong>Overdue Invoice Reminder: 3 Messages to Copy</strong><span>Copy the AI rules for day 7 and day 21 overdue invoice reminders with your pay link, plus a day 35 call list. Never a threat. You check every note.</span></a></li><li><a href="/guides/quote-follow-up/"><strong>Quote Follow Up Email and Text Rules</strong><span>AI rules that write a short quote follow up email or text about each job on day 2, 7, and 21. Works with Jobber, Housecall Pro, or ServiceTitan.</span></a></li><li><a href="/guides/ai-for-hvac/"><strong>AI for HVAC Companies: 7 Setups to Copy</strong><span>7 AI setups for HVAC companies: after hours calls, open estimates, old systems, reviews, and a 6am text. For Jobber, Housecall Pro, or ServiceTitan.</span></a></li></ul></nav></div></main><footer class="aud-foot"><div class="aud-links"><a href="/about/">About</a> <a href="/guides/">Guides</a> <a href="/rank/">Rank check</a> <a href="/privacy/">Privacy</a> <a href="https://www.linkedin.com/company/teamwide-ai" target="_blank" rel="noopener">LinkedIn</a> <a href="https://www.instagram.com/blue__walker/" target="_blank" rel="noopener">Instagram</a></div><p class="aud-legal">© 2026 Teamwide AI. We make no promises about income or results; every company is different. This site is not part of Instagram or Meta, and is not endorsed by them.</p></footer></body></html>

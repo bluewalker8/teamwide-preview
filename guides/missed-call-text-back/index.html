@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preload" href="/_astro/source-serif-4-latin-wght-italic.B-rCj6ir.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/dm-sans-latin-wght-normal.Xz1IZZA0.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><meta name="color-scheme" content="light"><title>Missed Call Text Back and Emergency Rule | Teamwide AI</title><meta name="description" content="Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone."><link rel="canonical" href="https://teamwideai.com/guides/missed-call-text-back/"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-11-20"><meta property="article:modified_time" content="2026-11-24"><meta property="og:site_name" content="Teamwide AI"><meta property="og:locale" content="en_US"><meta property="og:title" content="Missed Call Text Back and Emergency Rule | Teamwide AI"><meta property="og:description" content="Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone."><meta property="og:url" content="https://teamwideai.com/guides/missed-call-text-back/"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Missed Call Text Back and Emergency Rule | Teamwide AI"><meta name="twitter:description" content="Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone."><meta name="twitter:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://teamwideai.com/#organization","name":"Teamwide AI","url":"https://teamwideai.com/","logo":"https://teamwideai.com/img/logo-orb.webp"},{"@type":"Person","@id":"https://teamwideai.com/#blue-walker","name":"Blue Walker","url":"https://teamwideai.com/about/"},{"@type":"WebPage","@id":"https://teamwideai.com/guides/missed-call-text-back/#webpage","url":"https://teamwideai.com/guides/missed-call-text-back/","name":"Missed Call Text Back and Emergency Rule | Teamwide AI","description":"Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone.","isPartOf":{"@id":"https://teamwideai.com/#website"},"inLanguage":"en","breadcrumb":{"@id":"https://teamwideai.com/guides/missed-call-text-back/#breadcrumb"},"mainEntity":{"@id":"https://teamwideai.com/guides/missed-call-text-back/#article"}},{"@type":"Article","@id":"https://teamwideai.com/guides/missed-call-text-back/#article","headline":"Missed Call Text Back and Emergency Rule","description":"Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone.","url":"https://teamwideai.com/guides/missed-call-text-back/","mainEntityOfPage":{"@id":"https://teamwideai.com/guides/missed-call-text-back/#webpage"},"datePublished":"2026-11-20","dateModified":"2026-11-24","author":{"@id":"https://teamwideai.com/#blue-walker"},"publisher":{"@id":"https://teamwideai.com/#organization"},"image":["https://teamwideai.com/img/share.jpg"],"isAccessibleForFree":true,"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://teamwideai.com/guides/missed-call-text-back/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Teamwide AI","item":"https://teamwideai.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://teamwideai.com/guides/"},{"@type":"ListItem","position":3,"name":"Missed call text back, plus the AI rule that flags emergencies","item":"https://teamwideai.com/guides/missed-call-text-back/"}]}]}</script><script>(function(){const FIRST_KEY = 'tw-first';
+const KEEP_MS = 30 * 24 * 60 * 60 * 1000;
+function isInternal(utm) {
+return /^(site|blog|rank-check|gift-[a-z0-9._-]+|guide-[a-z0-9._-]+)$/.test(utm);
+}
+function clean(text, max) {
+return String(text || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, max || 40);
+}
+const AI_UTM = /(^|[._-])(chatgpt|openai|perplexity|gemini|copilot|claude)([._-]|$)/;
+const AI_HOST = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai)$/;
+const SEARCH_HOST = /(^|\.)(google|bing|duckduckgo|yahoo|brave|ecosia)\.[a-z.]+$/;
+const SOCIAL_HOST = /(^|\.)(instagram\.com|linkedin\.com|lnkd\.in|facebook\.com|fb\.com|youtube\.com|youtu\.be|tiktok\.com|x\.com|twitter\.com|t\.co|reddit\.com)$/;
+const SOCIAL_APP = /Instagram|FBAN|FBAV|LinkedInApp|TikTok|musical_ly|BytedanceWebview/;
+function classify(utm, referrer, ua, selfHost) {
+const tag = clean(utm);
+if (tag && !isInternal(tag)) return AI_UTM.test(tag) ? 'ai-search' : tag;
+let host = '';
+try {
+host = referrer ? new URL(referrer).hostname.replace(/^www\./, '').toLowerCase() : '';
+} catch (e) {
+host = '';
+}
+const self = String(selfHost || '').replace(/^www\./, '').toLowerCase();
+if (host && host === self) return null;
+if (host) {
+if (AI_HOST.test(host)) return 'ai-search';
+if (SEARCH_HOST.test(host)) return 'search';
+if (SOCIAL_HOST.test(host)) return 'social';
+return clean(host) || 'direct';
+}
+if (SOCIAL_APP.test(ua || '')) return 'social';
+return 'direct';
+}
+function readFirst(w) {
+try {
+const saved = JSON.parse(w.localStorage.getItem(FIRST_KEY) || 'null');
+if (!saved || typeof saved.s !== 'string' || !(w.Date.now() - saved.t < KEEP_MS)) return null;
+return { source: clean(saved.s), path: String(saved.p || '').slice(0, 80) };
+} catch (e) {
+return null;
+}
+}
+function firstTouch(w) {
+try {
+if (readFirst(w)) return;
+const loc = w.location;
+const source = classify(new URLSearchParams(loc.search).get('utm_source'), w.document.referrer, w.navigator.userAgent, loc.hostname);
+if (!source) return;
+const path = String(loc.pathname).replace(/[^A-Za-z0-9/_.-]/g, '').slice(0, 80);
+w.localStorage.setItem(FIRST_KEY, JSON.stringify({ s: source, p: path, t: w.Date.now() }));
+} catch (e) {
+/* storage blocked (private mode): the funnel falls back to plain sources */
+}
+}
+function combine(first, utm) {
+const tail = `>${utm}`;
+return `${String(first).slice(0, 100 - tail.length)}${tail}`.slice(0, 100);
+}
+firstTouch(window);})();</script><link rel="stylesheet" href="/_astro/Audit.dlTuc9Ud.css"><link rel="stylesheet" href="/_astro/GiftCta.I-DMkbPs.css"></head><body class="aud"><header class="aud-top aud-top-band"><a class="aud-brand" href="/" aria-label="Teamwide AI, home"><img src="/img/logo-orb.webp" alt="" width="26" height="26"><span>Teamwide AI</span></a></header><main class="aud-page"><div class="band"><section class="hero gift-hero"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page"><span>Missed call text back, plus the AI rule that flags emergencies</span></li></ol></nav><h1 class="hero-h1 gift-h1">Missed call text back, plus the AI rule that flags emergencies</h1><p class="hero-sub">Copy this exact setup so every missed call gets a text back and AI flags the real emergencies to your phone.</p><p class="byline"><span>By <a rel="author" href="/about/">Blue Walker</a></span><span><time datetime="2026-11-20">November 20, 2026</time></span><span>Updated <time datetime="2026-11-24">November 24, 2026</time></span></p></section></div><div class="aud-main"><article class="gift"><h2 id="step-1-turn-on-the-text-back-5-minutes">Step 1: turn on the text back (5 minutes)</h2>
+<p>Your phone app probably has it already:</p>
+<ul>
+<li><strong>Quo (OpenPhone):</strong> Settings, Phone Numbers, your number, Automations, Auto-Replies. Turn on missed calls.</li>
+<li><strong>Grasshopper:</strong> Instant Response.</li>
+<li><strong>Jobber Receptionist:</strong> “SMS send back” texts callers who hang up.</li>
+<li><strong>Housecall Pro:</strong> Settings, Inbox, Voice, missed call automations.</li>
+<li><strong>RingCentral:</strong> the Automator “Missed call auto-response” template. Calls that go to voicemail don’t trigger it, so set that up too.</li>
+</ul>
+<p>The text:</p>
+<div class="copybox"><pre><code>Hey, it's [your company]. We're on a job and missed you. What's going on, and what's the address?
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Keep it that short.
+No promises, no times, no prices.</p>
+<h2 id="step-2-the-smart-part-ai-reads-the-reply">Step 2: the smart part, AI reads the reply</h2>
+<p>With Quo and Zapier:</p>
+<ol>
+<li>Trigger: Quo “Incoming Message Received”.</li>
+<li>A ChatGPT or Claude step with the rule below.</li>
+<li>If it says URGENT, text your own cell with the summary.</li>
+<li>Everything else goes on one Google Sheet for when you’re free.</li>
+</ol>
+<p>The rule (paste this into the AI step):</p>
+<div class="copybox"><pre><code>You read a customer's text to a [plumbing] company. Decide if it is an emergency.
+
+Emergency: [a burst pipe, flooding, water coming through a ceiling, a sewer backup, no hot water in winter, no heat, a gas smell].
+For a gas smell, also tell them: leave the house and call the gas company or 911 from outside.
+
+Return one line only:
+URGENT: &lt;what is wrong in 5 words&gt;, &lt;the address if they gave one&gt;
+or
+NORMAL: &lt;what they need in 5 words&gt;
+
+Never diagnose. Never give a price or a time.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Swap the bracket words for your trade.</p>
+<h2 id="what-it-costs">What it costs</h2>
+<p>Quo is about $15 to $35 a user a month.
+Twilio, if you build it yourself, is about $1.15 a month for the number and about a cent a text.</p>
+<h2 id="rules">Rules</h2>
+<ul>
+<li>Texting from your own US number needs carrier registration (10DLC). Plan on 1 to 2 weeks. The phone apps above handle it for you.</li>
+<li>Only text people who called you.</li>
+<li>Always honor STOP.</li>
+</ul>
+</article><section class="gift-cta" aria-labelledby="gift-cta-title"><h2 id="gift-cta-title">Want us to find which of these would pay off fastest in your business?</h2><p>That is what the free AI Audit does.</p><a class="btn" href="/audit/?utm_source=guide-missed-call-text-back">Start your free AI Audit</a></section><script type="module">var e=e=>{let t=document.createElement(`textarea`);t.value=e,t.setAttribute(`readonly`,``),t.style.position=`fixed`,t.style.opacity=`0`,document.body.append(t),t.select(),t.setSelectionRange(0,e.length);let n=document.execCommand(`copy`);return t.remove(),n};for(let t of document.querySelectorAll(`[data-copy]`))t.addEventListener(`click`,async()=>{let n=t.previousElementSibling?.innerText.replace(/\n$/,``)??``,r=!1;try{await navigator.clipboard.writeText(n),r=!0}catch{r=e(n)}t.textContent=r?`Copied`:`Press and hold the text to copy`,t.dataset.done=r?`yes`:`no`,window.setTimeout(()=>{t.textContent=`Copy`,delete t.dataset.done},1800)});</script><nav class="gift-more" aria-labelledby="gift-more-title"><h2 id="gift-more-title">More guides</h2><ul class="gift-cards"><li><a href="/guides/ai-for-hvac/"><strong>AI for HVAC Companies: 7 Setups to Copy</strong><span>7 AI setups for HVAC companies: after hours calls, open estimates, old systems, reviews, and a 6am text. For Jobber, Housecall Pro, or ServiceTitan.</span></a></li><li><a href="/guides/ai-for-roofing/"><strong>AI for Roofing Companies: 7 Setups to Copy</strong><span>7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries.</span></a></li><li><a href="/guides/quote-follow-up/"><strong>Quote Follow Up Email and Text Rules</strong><span>AI rules that write a short quote follow up email or text about each job on day 2, 7, and 21. Works with Jobber, Housecall Pro, or ServiceTitan.</span></a></li></ul><h2>Agents</h2><ul class="gift-cards"><li><a href="/agents/missed-call-catcher/"><strong>Missed call catcher</strong><span>Logs every missed call and drafts a text back.</span></a></li></ul></nav></div></main><footer class="aud-foot"><div class="aud-links"><a href="/about/">About</a> <a href="/guides/">Guides</a> <a href="/rank/">Rank check</a> <a href="/privacy/">Privacy</a> <a href="https://www.linkedin.com/company/teamwide-ai" target="_blank" rel="noopener">LinkedIn</a> <a href="https://www.instagram.com/blue__walker/" target="_blank" rel="noopener">Instagram</a></div><p class="aud-legal">© 2026 Teamwide AI. We make no promises about income or results; every company is different. This site is not part of Instagram or Meta, and is not endorsed by them.</p></footer></body></html>

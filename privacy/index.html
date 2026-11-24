@@ -1,1 +1,59 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Privacy | Teamwide AI</title><meta name="description" content="What we collect on the Free AI Audit form, why, and how to ask us to delete it."><link rel="icon" href="/favicon.png" type="image/png"><link rel="preload" href="/_astro/newsreader-latin-opsz-italic.kJKFiXvB.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><link rel="canonical" href="https://teamwideai.com/privacy"><meta property="og:type" content="website"><meta property="og:site_name" content="Teamwide AI"><meta property="og:title" content="Privacy | Teamwide AI"><meta property="og:description" content="What we collect on the Free AI Audit form, why, and how to ask us to delete it."><meta property="og:url" content="https://teamwideai.com/privacy"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/_astro/privacy.BJw-hmdg.css"></head><body class="plain"><header class="plain-top"><a class="plain-brand" href="/audit"><img src="/img/logo-orb.webp" alt="" width="30" height="30"><span>Teamwide AI</span></a></header><main class="plain-main"><article class="prose"><h1 class="h2">Privacy</h1><p>This covers the Free AI Audit form on teamwideai.com (it replaced the AI Map form). Updated November 16, 2026.</p><h2>What we collect</h2><ul><li>Your first name, email, company, and, if you add them, your phone and website.</li><li>Your answers: how much your company makes in a year, your team size, your role, what would break if you left for 30 days, and when you want to start.</li><li>That you agreed we can email or text you about your audit.</li><li>Where you came from (like Instagram) and how much of the video you watched.</li></ul><h2>Why</h2><p>To prepare your audit, to set up and run your call, and to follow up with you about it. If you book a time, the booking tool also gets your name and email.</p><h2>Page counts</h2><p>The audit page counts steps like a visit, a play of the video, or a step of the form, and how long and how far: seconds on the page and of the video, how far down you scrolled, which question you reached. That is so we know what works. Each count carries a random number that lasts one page load, where you came from, the kind of device (phone or computer) and your time zone, and nothing else. No cookies, and nothing that says who you are.</p><h2>What we never do</h2><p><strong>We never sell your info.</strong> We don’t rent it or share it for anyone else’s ads.</p><h2>Stop or delete</h2><p>Reply stop to any text, or tell us by email, and we stop. To see or delete what we have on you, email <strong>blue@sellbychat.ai</strong> and we’ll do it.</p></article></main><footer class="plain-foot"><p>Teamwide AI</p></footer></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preload" href="/_astro/newsreader-latin-opsz-italic.kJKFiXvB.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><title>Privacy | Teamwide AI</title><meta name="description" content="What we collect on the Free AI Audit form, why, and how to ask us to delete it."><link rel="canonical" href="https://teamwideai.com/privacy/"><meta property="og:type" content="website"><meta property="og:site_name" content="Teamwide AI"><meta property="og:locale" content="en_US"><meta property="og:title" content="Privacy | Teamwide AI"><meta property="og:description" content="What we collect on the Free AI Audit form, why, and how to ask us to delete it."><meta property="og:url" content="https://teamwideai.com/privacy/"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Privacy | Teamwide AI"><meta name="twitter:description" content="What we collect on the Free AI Audit form, why, and how to ask us to delete it."><meta name="twitter:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script>(function(){const FIRST_KEY = 'tw-first';
+const KEEP_MS = 30 * 24 * 60 * 60 * 1000;
+function isInternal(utm) {
+return /^(site|blog|rank-check|gift-[a-z0-9._-]+|guide-[a-z0-9._-]+)$/.test(utm);
+}
+function clean(text, max) {
+return String(text || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, max || 40);
+}
+const AI_UTM = /(^|[._-])(chatgpt|openai|perplexity|gemini|copilot|claude)([._-]|$)/;
+const AI_HOST = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai)$/;
+const SEARCH_HOST = /(^|\.)(google|bing|duckduckgo|yahoo|brave|ecosia)\.[a-z.]+$/;
+const SOCIAL_HOST = /(^|\.)(instagram\.com|linkedin\.com|lnkd\.in|facebook\.com|fb\.com|youtube\.com|youtu\.be|tiktok\.com|x\.com|twitter\.com|t\.co|reddit\.com)$/;
+const SOCIAL_APP = /Instagram|FBAN|FBAV|LinkedInApp|TikTok|musical_ly|BytedanceWebview/;
+function classify(utm, referrer, ua, selfHost) {
+const tag = clean(utm);
+if (tag && !isInternal(tag)) return AI_UTM.test(tag) ? 'ai-search' : tag;
+let host = '';
+try {
+host = referrer ? new URL(referrer).hostname.replace(/^www\./, '').toLowerCase() : '';
+} catch (e) {
+host = '';
+}
+const self = String(selfHost || '').replace(/^www\./, '').toLowerCase();
+if (host && host === self) return null;
+if (host) {
+if (AI_HOST.test(host)) return 'ai-search';
+if (SEARCH_HOST.test(host)) return 'search';
+if (SOCIAL_HOST.test(host)) return 'social';
+return clean(host) || 'direct';
+}
+if (SOCIAL_APP.test(ua || '')) return 'social';
+return 'direct';
+}
+function readFirst(w) {
+try {
+const saved = JSON.parse(w.localStorage.getItem(FIRST_KEY) || 'null');
+if (!saved || typeof saved.s !== 'string' || !(w.Date.now() - saved.t < KEEP_MS)) return null;
+return { source: clean(saved.s), path: String(saved.p || '').slice(0, 80) };
+} catch (e) {
+return null;
+}
+}
+function firstTouch(w) {
+try {
+if (readFirst(w)) return;
+const loc = w.location;
+const source = classify(new URLSearchParams(loc.search).get('utm_source'), w.document.referrer, w.navigator.userAgent, loc.hostname);
+if (!source) return;
+const path = String(loc.pathname).replace(/[^A-Za-z0-9/_.-]/g, '').slice(0, 80);
+w.localStorage.setItem(FIRST_KEY, JSON.stringify({ s: source, p: path, t: w.Date.now() }));
+} catch (e) {
+/* storage blocked (private mode): the funnel falls back to plain sources */
+}
+}
+function combine(first, utm) {
+const tail = `>${utm}`;
+return `${String(first).slice(0, 100 - tail.length)}${tail}`.slice(0, 100);
+}
+firstTouch(window);})();</script><link rel="stylesheet" href="/_astro/privacy.BJw-hmdg.css"></head><body class="plain"><header class="plain-top"><a class="plain-brand" href="/audit/"><img src="/img/logo-orb.webp" alt="" width="30" height="30"><span>Teamwide AI</span></a></header><main class="plain-main"><article class="prose"><h1 class="h2">Privacy</h1><p>This covers the Free AI Audit form on teamwideai.com (it replaced the AI Map form). Updated November 16, 2026.</p><h2>What we collect</h2><ul><li>Your first name, email, company, and, if you add them, your phone and website.</li><li>Your answers: how much your company makes in a year, your team size, your role, what would break if you left for 30 days, and when you want to start.</li><li>That you agreed we can email or text you about your audit.</li><li>Where you came from (like Instagram) and how much of the video you watched.</li></ul><h2>Why</h2><p>To prepare your audit, to set up and run your call, and to follow up with you about it. If you book a time, the booking tool also gets your name and email.</p><h2>Page counts</h2><p>The audit page counts steps like a visit, a play of the video, or a step of the form. It also tracks seconds on the page and on the video, how far down you scrolled, and which question you reached. That is so we know what works. Each count carries a random number that lasts one page load, where you came from, your device type (phone or computer), your time zone, and nothing else. No cookies are set, and nothing says who you are.</p><p>On your first visit, the site also saves two things in your own browser for 30 days. It saves how you first found us (such as a search engine, an AI assistant, a social app, a link with a campaign tag, or typing the address directly) and the first page you landed on. This is saved in your browser's local storage. We do not use cookies. If you later fill in the audit form, how you first found us is sent along with the counts so we know which channels work. It still carries nothing that says who you are, and you can clear it any time by clearing the site data in your browser.</p><h2>What we never do</h2><p><strong>We never sell your info.</strong> We don’t rent it or share it for anyone else’s ads.</p><h2>Stop or delete</h2><p>Reply stop to any text, or tell us by email, and we stop. To see or delete what we have on you, email <strong>blue@sellbychat.ai</strong> and we’ll do it.</p></article></main><footer class="plain-foot"><p>Teamwide AI</p></footer></body></html>

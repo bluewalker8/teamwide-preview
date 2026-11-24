@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preload" href="/_astro/source-serif-4-latin-wght-italic.B-rCj6ir.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/dm-sans-latin-wght-normal.Xz1IZZA0.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><meta name="color-scheme" content="light"><title>Employee Called in Sick: The 6am Crew Setup | Teamwide AI</title><meta name="description" content="How to cover a sick call out before you wake up. Get the crew sheet, the six rules, the three texts, and the AI prompt to fill the open shift."><link rel="canonical" href="https://teamwideai.com/guides/employee-called-in-sick/"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-11-20"><meta property="article:modified_time" content="2026-11-24"><meta property="og:site_name" content="Teamwide AI"><meta property="og:locale" content="en_US"><meta property="og:title" content="Employee Called in Sick: The 6am Crew Setup | Teamwide AI"><meta property="og:description" content="How to cover a sick call out before you wake up. Get the crew sheet, the six rules, the three texts, and the AI prompt to fill the open shift."><meta property="og:url" content="https://teamwideai.com/guides/employee-called-in-sick/"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Employee Called in Sick: The 6am Crew Setup | Teamwide AI"><meta name="twitter:description" content="How to cover a sick call out before you wake up. Get the crew sheet, the six rules, the three texts, and the AI prompt to fill the open shift."><meta name="twitter:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://teamwideai.com/#organization","name":"Teamwide AI","url":"https://teamwideai.com/","logo":"https://teamwideai.com/img/logo-orb.webp"},{"@type":"Person","@id":"https://teamwideai.com/#blue-walker","name":"Blue Walker","url":"https://teamwideai.com/about/"},{"@type":"WebPage","@id":"https://teamwideai.com/guides/employee-called-in-sick/#webpage","url":"https://teamwideai.com/guides/employee-called-in-sick/","name":"Employee Called in Sick: The 6am Crew Setup | Teamwide AI","description":"How to cover a sick call out before you wake up. Get the crew sheet, the six rules, the three texts, and the AI prompt to fill the open shift.","isPartOf":{"@id":"https://teamwideai.com/#website"},"inLanguage":"en","breadcrumb":{"@id":"https://teamwideai.com/guides/employee-called-in-sick/#breadcrumb"},"mainEntity":{"@id":"https://teamwideai.com/guides/employee-called-in-sick/#article"}},{"@type":"Article","@id":"https://teamwideai.com/guides/employee-called-in-sick/#article","headline":"Employee Called in Sick: The 6am Crew Setup","description":"How to cover a sick call out before you wake up. Get the crew sheet, the six rules, the three texts, and the AI prompt to fill the open shift.","url":"https://teamwideai.com/guides/employee-called-in-sick/","mainEntityOfPage":{"@id":"https://teamwideai.com/guides/employee-called-in-sick/#webpage"},"datePublished":"2026-11-20","dateModified":"2026-11-24","author":{"@id":"https://teamwideai.com/#blue-walker"},"publisher":{"@id":"https://teamwideai.com/#organization"},"image":["https://teamwideai.com/img/share.jpg"],"isAccessibleForFree":true,"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://teamwideai.com/guides/employee-called-in-sick/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Teamwide AI","item":"https://teamwideai.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://teamwideai.com/guides/"},{"@type":"ListItem","position":3,"name":"Employee called in sick: the 6am setup to cover the crew","item":"https://teamwideai.com/guides/employee-called-in-sick/"}]}]}</script><script>(function(){const FIRST_KEY = 'tw-first';
+const KEEP_MS = 30 * 24 * 60 * 60 * 1000;
+function isInternal(utm) {
+return /^(site|blog|rank-check|gift-[a-z0-9._-]+|guide-[a-z0-9._-]+)$/.test(utm);
+}
+function clean(text, max) {
+return String(text || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, max || 40);
+}
+const AI_UTM = /(^|[._-])(chatgpt|openai|perplexity|gemini|copilot|claude)([._-]|$)/;
+const AI_HOST = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai)$/;
+const SEARCH_HOST = /(^|\.)(google|bing|duckduckgo|yahoo|brave|ecosia)\.[a-z.]+$/;
+const SOCIAL_HOST = /(^|\.)(instagram\.com|linkedin\.com|lnkd\.in|facebook\.com|fb\.com|youtube\.com|youtu\.be|tiktok\.com|x\.com|twitter\.com|t\.co|reddit\.com)$/;
+const SOCIAL_APP = /Instagram|FBAN|FBAV|LinkedInApp|TikTok|musical_ly|BytedanceWebview/;
+function classify(utm, referrer, ua, selfHost) {
+const tag = clean(utm);
+if (tag && !isInternal(tag)) return AI_UTM.test(tag) ? 'ai-search' : tag;
+let host = '';
+try {
+host = referrer ? new URL(referrer).hostname.replace(/^www\./, '').toLowerCase() : '';
+} catch (e) {
+host = '';
+}
+const self = String(selfHost || '').replace(/^www\./, '').toLowerCase();
+if (host && host === self) return null;
+if (host) {
+if (AI_HOST.test(host)) return 'ai-search';
+if (SEARCH_HOST.test(host)) return 'search';
+if (SOCIAL_HOST.test(host)) return 'social';
+return clean(host) || 'direct';
+}
+if (SOCIAL_APP.test(ua || '')) return 'social';
+return 'direct';
+}
+function readFirst(w) {
+try {
+const saved = JSON.parse(w.localStorage.getItem(FIRST_KEY) || 'null');
+if (!saved || typeof saved.s !== 'string' || !(w.Date.now() - saved.t < KEEP_MS)) return null;
+return { source: clean(saved.s), path: String(saved.p || '').slice(0, 80) };
+} catch (e) {
+return null;
+}
+}
+function firstTouch(w) {
+try {
+if (readFirst(w)) return;
+const loc = w.location;
+const source = classify(new URLSearchParams(loc.search).get('utm_source'), w.document.referrer, w.navigator.userAgent, loc.hostname);
+if (!source) return;
+const path = String(loc.pathname).replace(/[^A-Za-z0-9/_.-]/g, '').slice(0, 80);
+w.localStorage.setItem(FIRST_KEY, JSON.stringify({ s: source, p: path, t: w.Date.now() }));
+} catch (e) {
+/* storage blocked (private mode): the funnel falls back to plain sources */
+}
+}
+function combine(first, utm) {
+const tail = `>${utm}`;
+return `${String(first).slice(0, 100 - tail.length)}${tail}`.slice(0, 100);
+}
+firstTouch(window);})();</script><link rel="stylesheet" href="/_astro/Audit.dlTuc9Ud.css"><link rel="stylesheet" href="/_astro/GiftCta.I-DMkbPs.css"></head><body class="aud"><header class="aud-top aud-top-band"><a class="aud-brand" href="/" aria-label="Teamwide AI, home"><img src="/img/logo-orb.webp" alt="" width="26" height="26"><span>Teamwide AI</span></a></header><main class="aud-page"><div class="band"><section class="hero gift-hero"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page"><span>Employee called in sick: the 6am setup to cover the crew</span></li></ol></nav><h1 class="hero-h1 gift-h1">Employee called in sick: the 6am setup to cover the crew</h1><p class="hero-sub">A cleaner texts in sick, the right people get a shift offer, the first yes gets it, and the client hears who is coming. You stay asleep.</p><p class="byline"><span>By <a rel="author" href="/about/">Blue Walker</a></span><span><time datetime="2026-11-20">November 20, 2026</time></span><span>Updated <time datetime="2026-11-24">November 24, 2026</time></span></p></section></div><div class="aud-main"><article class="gift"><h2 id="before-anything-only-text-people-who-said-yes">Before anything: only text people who said yes</h2>
+<p>Only send shift offers to crew who agreed to get shift texts.
+Ask each person once, in writing: “Can we text you open shifts? Reply STOP any time.”
+Mark it on the crew sheet.
+Anyone who says STOP comes off the list that day.</p>
+<h2 id="step-1-the-crew-sheet">Step 1. The crew sheet</h2>
+<p>One row per cleaner.
+A Google Sheet is fine.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What goes in it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>First and last name</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>Their cell</td>
+</tr>
+<tr>
+<td>Areas</td>
+<td>The towns they work, like “Brookfield, Oak Hollow”</td>
+</tr>
+<tr>
+<td>Buildings they know</td>
+<td>The sites they have cleaned before</td>
+</tr>
+<tr>
+<td>Key or alarm code on file</td>
+<td>Just yes or no for each building. Never put the code itself in the sheet or in a text.</td>
+</tr>
+<tr>
+<td>Today’s bookings</td>
+<td>Site, start, end. Most scheduling apps export this.</td>
+</tr>
+<tr>
+<td>Shift texts</td>
+<td>yes or no. Only “yes” gets offers.</td>
+</tr>
+<tr>
+<td>Off today</td>
+<td>yes or no</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="step-2-the-rule">Step 2. The rule</h2>
+<p>When a sick text comes in, the AI finds the person and their open shifts.
+Then the rule picks who to text.
+A cleaner gets the offer only if all of these are true:</p>
+<ol>
+<li>They are not the person who is out.</li>
+<li>They are working today (not off).</li>
+<li>They said yes to shift texts.</li>
+<li>They work that town.</li>
+<li>They know that building (for sites that need it, like an office with an alarm).</li>
+<li>They have no booking that overlaps the open shift.</li>
+</ol>
+<p>Text everyone who fits at the same time.
+The first clean yes gets the shift.
+A clean yes means yes to the shift as offered: same time, no conditions.
+“I could do 9 not 8” is not a yes.
+Everyone who says yes after that gets “Thanks, it’s filled.”
+Then text the client who is coming.</p>
+<h2 id="the-three-messages">The three messages</h2>
+<h3 id="1-the-offer-to-everyone-who-fits">1. The offer (to everyone who fits)</h3>
+<div class="copybox"><pre><code>Can you take the 8am at Brookfield Dental? 2 hours. Reply yes if you can.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Never say who is out or why.</p>
+<h3 id="2-filled-to-anyone-who-says-yes-after-the-first-one-or-offered-a-different-time">2. Filled (to anyone who says yes after the first one, or offered a different time)</h3>
+<div class="copybox"><pre><code>Thanks, it's filled.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>And to the person who got it:</p>
+<div class="copybox"><pre><code>You've got it. Brookfield Dental at 8am. Thank you!
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<h3 id="3-the-client-text-after-the-first-yes">3. The client text (after the first yes)</h3>
+<div class="copybox"><pre><code>Morning Karen! Ana's covering today. Same checklist.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Only the name of who is coming.
+Never who was booked, never that anyone is sick.
+Their health is their business.</p>
+<h2 id="the-prompt-for-the-ai-steps">The prompt for the AI steps</h2>
+<p>Paste this into the AI step of your automation (Claude or ChatGPT).</p>
+<div class="copybox"><pre><code>You help my cleaning company cover shifts when a cleaner cannot come in.
+
+When a text comes in, I give you the crew list and today's schedule.
+1. Say who sent it (match the phone number), whether they are calling out, and which of their bookings today are now open. Only their bookings.
+2. Write one short shift offer: start time, place, how many hours. Like "Can you take the 8am at Brookfield Dental? 2 hours." Never say who is out or why.
+3. When someone replies, say "yes" only if they can take it as offered with no change, "maybe" if they want a different time or a condition, "no" if they can't.
+4. After the first yes, write the client text: who is coming, first name only, short and warm. Never mention who was booked or any health detail. Then write me one line: who is out, who is covering, and that the client was told.
+
+No long dashes. Plain words.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<h2 id="setup-steps">Setup steps</h2>
+<ol>
+<li><strong>A text line for the business.</strong> Quo (OpenPhone’s new name) or Twilio. Crew texts this number, not your cell.</li>
+<li><strong>The automation.</strong> Zapier or n8n. Trigger: a new text comes in to the business line.</li>
+<li><strong>AI step 1:</strong> read the text with the crew sheet and today’s schedule (the prompt above).</li>
+<li><strong>The rule:</strong> a filter or code step that checks the six rules against the sheet. Do this part as plain rules, not AI, so it never texts the wrong person.</li>
+<li><strong>Send the offer</strong> to everyone who fits, from the business line.</li>
+<li><strong>AI step 2:</strong> read each reply as yes, no or maybe. The first yes wins. Store “filled” in the sheet so a second yes gets “Thanks, it’s filled.”</li>
+<li><strong>Text the client</strong> and send yourself the one-line note.</li>
+<li><strong>Approve the first few yourself.</strong> For the first 5 to 10 call-outs, have the automation send you each text to approve before it goes out. Once it gets them right, let it run.</li>
+</ol>
+<h2 id="cost">Cost</h2>
+<ul>
+<li>AI: about 2 cents per call-out (8 short AI steps).</li>
+<li>Texts: about 1 cent each with Twilio, so about 10 cents for a call-out with 6 offers.</li>
+<li>Quo is $15 to $35 a user a month.</li>
+<li>Zapier needs a paid plan for multi-step zaps.</li>
+</ul>
+<h2 id="rules-to-know">Rules to know</h2>
+<ul>
+<li>US texting from a business number needs 10DLC registration (Quo handles it; on Twilio plan for 1 to 2 weeks).</li>
+<li>Honor STOP right away.</li>
+<li>Never send key codes or alarm codes by text.</li>
+</ul>
+</article><section class="gift-cta" aria-labelledby="gift-cta-title"><h2 id="gift-cta-title">Want us to find which of these would pay off fastest in your business?</h2><p>That is what the free AI Audit does.</p><a class="btn" href="/audit/?utm_source=guide-employee-called-in-sick">Start your free AI Audit</a></section><script type="module">var e=e=>{let t=document.createElement(`textarea`);t.value=e,t.setAttribute(`readonly`,``),t.style.position=`fixed`,t.style.opacity=`0`,document.body.append(t),t.select(),t.setSelectionRange(0,e.length);let n=document.execCommand(`copy`);return t.remove(),n};for(let t of document.querySelectorAll(`[data-copy]`))t.addEventListener(`click`,async()=>{let n=t.previousElementSibling?.innerText.replace(/\n$/,``)??``,r=!1;try{await navigator.clipboard.writeText(n),r=!0}catch{r=e(n)}t.textContent=r?`Copied`:`Press and hold the text to copy`,t.dataset.done=r?`yes`:`no`,window.setTimeout(()=>{t.textContent=`Copy`,delete t.dataset.done},1800)});</script><nav class="gift-more" aria-labelledby="gift-more-title"><h2 id="gift-more-title">More guides</h2><ul class="gift-cards"><li><a href="/guides/missed-call-text-back/"><strong>Missed Call Text Back and Emergency Rule</strong><span>Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone.</span></a></li><li><a href="/guides/overdue-invoice-reminders/"><strong>Overdue Invoice Reminder: 3 Messages to Copy</strong><span>Copy the AI rules for day 7 and day 21 overdue invoice reminders with your pay link, plus a day 35 call list. Never a threat. You check every note.</span></a></li><li><a href="/guides/job-costing-for-contractors/"><strong>Job Costing for Contractors: Spot Losing Jobs</strong><span>Pull two exports into one sheet and run this AI prompt on the 1st of every month. It flags every job under your margin and lists unbilled change orders.</span></a></li></ul></nav></div></main><footer class="aud-foot"><div class="aud-links"><a href="/about/">About</a> <a href="/guides/">Guides</a> <a href="/rank/">Rank check</a> <a href="/privacy/">Privacy</a> <a href="https://www.linkedin.com/company/teamwide-ai" target="_blank" rel="noopener">LinkedIn</a> <a href="https://www.instagram.com/blue__walker/" target="_blank" rel="noopener">Instagram</a></div><p class="aud-legal">© 2026 Teamwide AI. We make no promises about income or results; every company is different. This site is not part of Instagram or Meta, and is not endorsed by them.</p></footer></body></html>

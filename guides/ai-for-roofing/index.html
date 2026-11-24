@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="preload" href="/_astro/source-serif-4-latin-wght-italic.B-rCj6ir.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/dm-sans-latin-wght-normal.Xz1IZZA0.woff2" as="font" type="font/woff2" crossorigin><meta name="theme-color" content="#030305"><meta name="color-scheme" content="light"><title>AI for Roofing Companies: 7 Setups to Copy | Teamwide AI</title><meta name="description" content="7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries."><link rel="canonical" href="https://teamwideai.com/guides/ai-for-roofing/"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-11-20"><meta property="article:modified_time" content="2026-11-24"><meta property="og:site_name" content="Teamwide AI"><meta property="og:locale" content="en_US"><meta property="og:title" content="AI for Roofing Companies: 7 Setups to Copy | Teamwide AI"><meta property="og:description" content="7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries."><meta property="og:url" content="https://teamwideai.com/guides/ai-for-roofing/"><meta property="og:image" content="https://teamwideai.com/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI for Roofing Companies: 7 Setups to Copy | Teamwide AI"><meta name="twitter:description" content="7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries."><meta name="twitter:image" content="https://teamwideai.com/img/share.jpg"><meta name="twitter:image:alt" content="Teamwide AI: We help businesses implement AI to cut costs and increase profits."><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://teamwideai.com/#organization","name":"Teamwide AI","url":"https://teamwideai.com/","logo":"https://teamwideai.com/img/logo-orb.webp"},{"@type":"Person","@id":"https://teamwideai.com/#blue-walker","name":"Blue Walker","url":"https://teamwideai.com/about/"},{"@type":"WebPage","@id":"https://teamwideai.com/guides/ai-for-roofing/#webpage","url":"https://teamwideai.com/guides/ai-for-roofing/","name":"AI for Roofing Companies: 7 Setups to Copy | Teamwide AI","description":"7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries.","isPartOf":{"@id":"https://teamwideai.com/#website"},"inLanguage":"en","breadcrumb":{"@id":"https://teamwideai.com/guides/ai-for-roofing/#breadcrumb"},"mainEntity":{"@id":"https://teamwideai.com/guides/ai-for-roofing/#article"}},{"@type":"Article","@id":"https://teamwideai.com/guides/ai-for-roofing/#article","headline":"AI for Roofing Companies: 7 Setups to Copy","description":"7 AI setups for roofing companies: open quotes, missed calls, storm and hail mode, job pages, reviews, neighbor postcards, and insurance summaries.","url":"https://teamwideai.com/guides/ai-for-roofing/","mainEntityOfPage":{"@id":"https://teamwideai.com/guides/ai-for-roofing/#webpage"},"datePublished":"2026-11-20","dateModified":"2026-11-24","author":{"@id":"https://teamwideai.com/#blue-walker"},"publisher":{"@id":"https://teamwideai.com/#organization"},"image":["https://teamwideai.com/img/share.jpg"],"isAccessibleForFree":true,"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://teamwideai.com/guides/ai-for-roofing/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Teamwide AI","item":"https://teamwideai.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://teamwideai.com/guides/"},{"@type":"ListItem","position":3,"name":"AI for roofing companies: 7 places to use it and how to set each up","item":"https://teamwideai.com/guides/ai-for-roofing/"}]}]}</script><script>(function(){const FIRST_KEY = 'tw-first';
+const KEEP_MS = 30 * 24 * 60 * 60 * 1000;
+function isInternal(utm) {
+return /^(site|blog|rank-check|gift-[a-z0-9._-]+|guide-[a-z0-9._-]+)$/.test(utm);
+}
+function clean(text, max) {
+return String(text || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, max || 40);
+}
+const AI_UTM = /(^|[._-])(chatgpt|openai|perplexity|gemini|copilot|claude)([._-]|$)/;
+const AI_HOST = /(^|\.)(chatgpt\.com|openai\.com|perplexity\.ai|gemini\.google\.com|copilot\.microsoft\.com|claude\.ai)$/;
+const SEARCH_HOST = /(^|\.)(google|bing|duckduckgo|yahoo|brave|ecosia)\.[a-z.]+$/;
+const SOCIAL_HOST = /(^|\.)(instagram\.com|linkedin\.com|lnkd\.in|facebook\.com|fb\.com|youtube\.com|youtu\.be|tiktok\.com|x\.com|twitter\.com|t\.co|reddit\.com)$/;
+const SOCIAL_APP = /Instagram|FBAN|FBAV|LinkedInApp|TikTok|musical_ly|BytedanceWebview/;
+function classify(utm, referrer, ua, selfHost) {
+const tag = clean(utm);
+if (tag && !isInternal(tag)) return AI_UTM.test(tag) ? 'ai-search' : tag;
+let host = '';
+try {
+host = referrer ? new URL(referrer).hostname.replace(/^www\./, '').toLowerCase() : '';
+} catch (e) {
+host = '';
+}
+const self = String(selfHost || '').replace(/^www\./, '').toLowerCase();
+if (host && host === self) return null;
+if (host) {
+if (AI_HOST.test(host)) return 'ai-search';
+if (SEARCH_HOST.test(host)) return 'search';
+if (SOCIAL_HOST.test(host)) return 'social';
+return clean(host) || 'direct';
+}
+if (SOCIAL_APP.test(ua || '')) return 'social';
+return 'direct';
+}
+function readFirst(w) {
+try {
+const saved = JSON.parse(w.localStorage.getItem(FIRST_KEY) || 'null');
+if (!saved || typeof saved.s !== 'string' || !(w.Date.now() - saved.t < KEEP_MS)) return null;
+return { source: clean(saved.s), path: String(saved.p || '').slice(0, 80) };
+} catch (e) {
+return null;
+}
+}
+function firstTouch(w) {
+try {
+if (readFirst(w)) return;
+const loc = w.location;
+const source = classify(new URLSearchParams(loc.search).get('utm_source'), w.document.referrer, w.navigator.userAgent, loc.hostname);
+if (!source) return;
+const path = String(loc.pathname).replace(/[^A-Za-z0-9/_.-]/g, '').slice(0, 80);
+w.localStorage.setItem(FIRST_KEY, JSON.stringify({ s: source, p: path, t: w.Date.now() }));
+} catch (e) {
+/* storage blocked (private mode): the funnel falls back to plain sources */
+}
+}
+function combine(first, utm) {
+const tail = `>${utm}`;
+return `${String(first).slice(0, 100 - tail.length)}${tail}`.slice(0, 100);
+}
+firstTouch(window);})();</script><link rel="stylesheet" href="/_astro/Audit.dlTuc9Ud.css"><link rel="stylesheet" href="/_astro/GiftCta.I-DMkbPs.css"></head><body class="aud"><header class="aud-top aud-top-band"><a class="aud-brand" href="/" aria-label="Teamwide AI, home"><img src="/img/logo-orb.webp" alt="" width="26" height="26"><span>Teamwide AI</span></a></header><main class="aud-page"><div class="band"><section class="hero gift-hero"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li aria-current="page"><span>AI for roofing companies: 7 places to use it and how to set each up</span></li></ol></nav><h1 class="hero-h1 gift-h1">AI for roofing companies: 7 places to use it and how to set each up</h1><p class="hero-sub">Each one runs on every call, every quote or every job by itself. For each: what it does, the simple setup, and the rule that keeps it safe.</p><p class="byline"><span>By <a rel="author" href="/about/">Blue Walker</a></span><span><time datetime="2026-11-20">November 20, 2026</time></span><span>Updated <time datetime="2026-11-24">November 24, 2026</time></span></p></section></div><div class="aud-main"><article class="gift"><h2 id="before-you-start">Before you start</h2>
+<p>Pick one.
+Set it up, watch it for two weeks, then do the next one.
+Start with number 1. The money is in the leads you already paid for.</p>
+<p>You don’t need a new CRM.
+Everything here sits on top of what you use now (AccuLynx, JobNimbus, Roofr, Jobber or a spreadsheet), plus a business texting app like Quo and Claude or ChatGPT.
+Zapier connects them when they don’t talk to each other.</p>
+<h2 id="1-every-open-quote-followed-up">1. Every open quote followed up</h2>
+<h3 id="what-it-does">What it does</h3>
+<p>Every estimate that didn’t sign gets a short follow up about that homeowner’s actual roof, on day 2, day 7 and day 21, then a check in each season.
+A lot of quotes don’t die on price. They die because nobody calls back.
+It stops the moment they reply, and your rep takes over.</p>
+<h3 id="set-it-up">Set it up</h3>
+<ol>
+<li>Export every unsigned estimate from the last 12 months: first name, the address’s town, the job (full replacement, repair, gutters), the price, the date, and the rep’s notes.</li>
+<li>Paste the list into Claude or ChatGPT with the rules from our <a href="/guides/quote-follow-up/">open quotes guide</a>, and say:</li>
+</ol>
+<div class="copybox"><pre><code>These are roofing estimates. Write the day 2 text for each one. Use one real detail from the notes, like the roof type, a leak they mentioned, the color they liked or a question about financing.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<ol start="3">
+<li>Send from your business texting app. On Jobber, Zapier can do it by itself: trigger “Quote Sent”, wait 2 days, AI step, send.</li>
+</ol>
+<p>January and February are slow in cold markets. That’s the best time to work old quotes.</p>
+<h3 id="keep-it-safe">Keep it safe</h3>
+<ul>
+<li>Only text people who asked you for an estimate.</li>
+<li>Never change the price, never invent a deadline or a “sale”.</li>
+<li>Read the first batch before anything goes out.</li>
+</ul>
+<h2 id="2-missed-calls-answered-in-seconds">2. Missed calls answered in seconds</h2>
+<h3 id="what-it-does-1">What it does</h3>
+<p>A lot of calls get missed in the middle of the day, while you’re on a roof.
+Every missed call gets a text back in seconds, and AI reads the reply.
+Water coming in goes straight to your phone.</p>
+<h3 id="set-it-up-1">Set it up</h3>
+<ul>
+<li><strong>Quo (OpenPhone):</strong> Settings, Phone Numbers, your number, Automations, Auto-Replies. Turn on missed calls.</li>
+<li><strong>Jobber Receptionist</strong> texts callers who hang up, and has trigger words that alert you.</li>
+<li>Our <a href="/guides/missed-call-text-back/">missed call guide</a> has the exact text and the AI rule. For roofing, the emergency list is:</li>
+</ul>
+<div class="copybox"><pre><code>Emergency: water coming in through the ceiling or walls, a tree or limb on the roof, part of the roof torn off or open to the weather.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<h3 id="keep-it-safe-1">Keep it safe</h3>
+<ul>
+<li>Text first. Homeowners hate fake voices on the phone.</li>
+<li>If an AI ever answers, it says it’s the office assistant.</li>
+<li>Only text people who called you, and honor STOP.</li>
+</ul>
+<h2 id="3-storm-and-hail-mode">3. Storm and hail mode</h2>
+<h3 id="what-it-does-2">What it does</h3>
+<p>When a hail storm or a big wind storm hits your area, AI checks which of your past customers and open quotes are in the hit zip codes.
+They get a short note offering a free roof check, and your calendar opens extra inspection slots for the next few days.
+Your reps get a list sorted by zip code instead of guessing.</p>
+<h3 id="set-it-up-2">Set it up</h3>
+<ol>
+<li>After a storm, check the free NOAA storm reports for hail and wind in your area, and write down the zip codes.</li>
+<li>Export your past customers and open quotes with their zip codes.</li>
+<li>Paste both into Claude or ChatGPT:</li>
+</ol>
+<div class="copybox"><pre><code>Here are the zip codes hit by the storm on [date], and my list of past customers and open quotes.
+Find everyone in those zip codes.
+For each one, write a short, calm text from my roofing company: there was a storm in their area on [date], and we can do a free roof check if they want one. One easy question about a good day.
+Never say their roof is damaged. Never mention insurance or a free roof. Under 40 words.
+Then sort the list by zip code so my reps can plan their day.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<h3 id="keep-it-safe-2">Keep it safe</h3>
+<ul>
+<li>Only your own past customers and people who asked you for a quote. Never cold text or AI call homeowners. US law (the TCPA) needs their OK first, and the fines are per text.</li>
+<li>Never say “your roof is damaged”. You haven’t seen it.</li>
+<li>Never promise insurance will pay.</li>
+</ul>
+<h2 id="4-every-job-becomes-a-page">4. Every job becomes a page</h2>
+<h3 id="what-it-does-3">What it does</h3>
+<p>Every finished roof turns into a short page on your website: the town, the problem, the work, and your own before and after photos.
+That’s what Google and the AI answers read when someone asks for a good roofer in their town.</p>
+<h3 id="set-it-up-3">Set it up</h3>
+<p>Paste this into Claude or ChatGPT with the job notes and photos:</p>
+<div class="copybox"><pre><code>Write a short page for my roofing company's website about one real job we just finished.
+Use only what is in my notes and photos. Never make up a detail, a number or a quote.
+
+Title: the service and the town, like "Roof replacement in [town]".
+Then 4 short parts:
+The problem: why the homeowner called, in plain words.
+What we found: what we saw on the roof.
+What we did: the work and the materials, in plain words.
+The result: how it was left.
+
+Under 300 words. Plain words a homeowner would use.
+Never use the customer's name or house number.
+List which before and after photos to use, and write one plain caption for each.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<p>Read it, fix it, post it.
+Post the same thing to your Google Business Profile.</p>
+<h3 id="keep-it-safe-3">Keep it safe</h3>
+<ul>
+<li>Ask the customer before you post photos of their home.</li>
+<li>One real job, one real page. Google’s spam rules go after mass made AI pages.</li>
+</ul>
+<h2 id="5-every-finished-job-asks-for-a-review">5. Every finished job asks for a review</h2>
+<h3 id="what-it-does-4">What it does</h3>
+<p>The day the crew finishes, the homeowner gets a text with your Google review link.
+30 days later, a second text asks if they know anyone who needs a roof looked at.</p>
+<h3 id="set-it-up-4">Set it up</h3>
+<ol>
+<li>Get your review link: in your Google Business Profile, tap “Ask for reviews” and copy it.</li>
+<li>If your CRM sends review requests, turn it on.</li>
+<li>If not: Zapier, trigger “job completed” in your CRM (Housecall Pro calls it “New Completed Job”), then send these from your texting app:</li>
+</ol>
+<div class="copybox"><pre><code>Hi [first name], thanks for trusting us with your roof. If the crew did a good job, would you leave us a quick Google review? It really helps a small company like ours. [review link]
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<div class="copybox"><pre><code>Hi [first name], it's [your name] from [company]. How's the new roof holding up? If you know anyone who needs their roof looked at, we'd take good care of them.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<h3 id="keep-it-safe-4">Keep it safe</h3>
+<ul>
+<li>Ask every customer, not only the happy ones. Asking only happy customers breaks Google’s rules.</li>
+<li>Only text customers who agreed to texts, and honor STOP.</li>
+</ul>
+<h2 id="6-neighbor-postcards-after-every-job-with-the-customers-ok">6. Neighbor postcards after every job, with the customer’s OK</h2>
+<h3 id="what-it-does-5">What it does</h3>
+<p>When a roof is finished, the closest homes get a postcard: we just did a roof on your street.
+The trust of a real job next door does the selling.</p>
+<h3 id="set-it-up-5">Set it up</h3>
+<ol>
+<li>Ask the homeowner first: “Is it OK if we let a few neighbors know we did your roof? We never use your name or house number.”</li>
+<li>Pick a mail tool:
+<ul>
+<li><strong>Jobber</strong> has a PostcardMania integration for mailings around finished jobs.</li>
+<li><strong>Housecall Pro:</strong> Zapier “New Completed Job” to SendJim’s neighbor mailing.</li>
+<li><strong>Thanks.io</strong> or <strong>Lob</strong> if you want to build it yourself. Plan on about $1 a card all in.</li>
+</ul>
+</li>
+<li>Let AI write the card from the job:</li>
+</ol>
+<div class="copybox"><pre><code>Write a short postcard for my roofing company to send to neighbors near a roof we just finished.
+The job: [roof type, color, what we did].
+Say we just finished a roof on [street name], and offer a free roof check. Plain, friendly, under 50 words.
+Never use the customer's name or house number. Never say their roof looks bad. No fake deadlines.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<ol start="4">
+<li>Start with 25 to 50 homes per job, not hundreds, and track the calls.</li>
+</ol>
+<h3 id="keep-it-safe-5">Keep it safe</h3>
+<ul>
+<li>Only with the customer’s OK, and never their name or house number.</li>
+<li>Never say a neighbor’s roof is damaged.</li>
+</ul>
+<h2 id="7-insurance-paperwork-summed-up-in-plain-words">7. Insurance paperwork, summed up in plain words</h2>
+<h3 id="what-it-does-6">What it does</h3>
+<p>AI reads the adjuster’s estimate and your photos, and writes two things: a plain summary for the homeowner of what the claim covers, and a checklist for your office of items that look missing so a person can check them.</p>
+<h3 id="set-it-up-6">Set it up</h3>
+<ol>
+<li>Black out the policy number and personal details first.</li>
+<li>Paste the adjuster’s estimate and your inspection notes into Claude or ChatGPT:</li>
+</ol>
+<div class="copybox"><pre><code>Below is an insurance adjuster's estimate for a roof claim, and my inspection notes and photo list.
+1. Write a plain summary for the homeowner: what the estimate covers, in words a 12 year old understands. No promises about what will be paid.
+2. Write a checklist for my office: items in my inspection notes that are not in the adjuster's estimate, each with the photo that shows it. Mark each one CHECK. Do not decide anything.
+Use only what is in the documents. Never make up a line item or an amount.
+</code></pre><button class="copy" type="button" data-copy>Copy</button></div>
+<ol start="3">
+<li>Your supplement person or estimator checks every item before anything is sent.</li>
+</ol>
+<h3 id="keep-it-safe-6">Keep it safe</h3>
+<ul>
+<li>You document and request. Only a public adjuster or a lawyer can negotiate a claim for the homeowner.</li>
+<li>Never promise a homeowner what insurance will pay.</li>
+<li>An expert checks every one before it goes to the insurance company.</li>
+</ul>
+<h2 id="the-rule-for-all-7">The rule for all 7</h2>
+<p>A person approves at first.
+Read what it writes for the first two weeks, fix what’s off, then let it run.
+Only text people who asked you for something, and honor STOP every time.</p>
+</article><section class="gift-cta" aria-labelledby="gift-cta-title"><h2 id="gift-cta-title">Want us to find which of these would pay off fastest in your business?</h2><p>That is what the free AI Audit does.</p><a class="btn" href="/audit/?utm_source=guide-ai-for-roofing">Start your free AI Audit</a></section><script type="module">var e=e=>{let t=document.createElement(`textarea`);t.value=e,t.setAttribute(`readonly`,``),t.style.position=`fixed`,t.style.opacity=`0`,document.body.append(t),t.select(),t.setSelectionRange(0,e.length);let n=document.execCommand(`copy`);return t.remove(),n};for(let t of document.querySelectorAll(`[data-copy]`))t.addEventListener(`click`,async()=>{let n=t.previousElementSibling?.innerText.replace(/\n$/,``)??``,r=!1;try{await navigator.clipboard.writeText(n),r=!0}catch{r=e(n)}t.textContent=r?`Copied`:`Press and hold the text to copy`,t.dataset.done=r?`yes`:`no`,window.setTimeout(()=>{t.textContent=`Copy`,delete t.dataset.done},1800)});</script><nav class="gift-more" aria-labelledby="gift-more-title"><h2 id="gift-more-title">More guides</h2><ul class="gift-cards"><li><a href="/guides/quote-follow-up/"><strong>Quote Follow Up Email and Text Rules</strong><span>AI rules that write a short quote follow up email or text about each job on day 2, 7, and 21. Works with Jobber, Housecall Pro, or ServiceTitan.</span></a></li><li><a href="/guides/missed-call-text-back/"><strong>Missed Call Text Back and Emergency Rule</strong><span>Set up missed call text back in Quo, Grasshopper, Jobber, or Housecall Pro. Then let AI read every reply and flag real emergencies to your phone.</span></a></li><li><a href="/guides/ai-for-hvac/"><strong>AI for HVAC Companies: 7 Setups to Copy</strong><span>7 AI setups for HVAC companies: after hours calls, open estimates, old systems, reviews, and a 6am text. For Jobber, Housecall Pro, or ServiceTitan.</span></a></li></ul></nav></div></main><footer class="aud-foot"><div class="aud-links"><a href="/about/">About</a> <a href="/guides/">Guides</a> <a href="/rank/">Rank check</a> <a href="/privacy/">Privacy</a> <a href="https://www.linkedin.com/company/teamwide-ai" target="_blank" rel="noopener">LinkedIn</a> <a href="https://www.instagram.com/blue__walker/" target="_blank" rel="noopener">Instagram</a></div><p class="aud-legal">© 2026 Teamwide AI. We make no promises about income or results; every company is different. This site is not part of Instagram or Meta, and is not endorsed by them.</p></footer></body></html>
